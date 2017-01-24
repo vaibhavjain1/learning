@@ -1,4 +1,4 @@
-package lambdaExpressionIntro;
+package lambdaExpression;
 
 interface LambdaInterface{
 	public int performTask(int a,int b);
