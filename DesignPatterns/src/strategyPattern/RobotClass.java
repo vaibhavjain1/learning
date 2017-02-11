@@ -1,6 +1,6 @@
-package strategy_pattern;
+package strategyPattern;
 
-public class RobotClass {
+public class RobotClass implements IBehaviour{
 	IBehaviour behaviourInterfaceObj;
 	String robotType;
 	
@@ -24,7 +24,8 @@ public class RobotClass {
 		this.robotType = robotType;
 	}
 	
-	public String move(){
+	@Override
+	public String moveCommand(){
 		return "In Abstract Class : "+behaviourInterfaceObj.moveCommand();
 	}
 }

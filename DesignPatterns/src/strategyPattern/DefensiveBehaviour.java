@@ -1,4 +1,4 @@
-package strategy_pattern;
+package strategyPattern;
 
 public class DefensiveBehaviour implements IBehaviour {
 
