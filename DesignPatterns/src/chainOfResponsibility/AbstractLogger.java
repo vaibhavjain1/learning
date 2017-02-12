@@ -1,10 +1,6 @@
 package chainOfResponsibility;
 
 public abstract class AbstractLogger {
-
-	public static final int DEBUG = 1;
-	public static final int INFO = 2;
-	public static final int WARN = 3;
 	
 	public int level;
 	public AbstractLogger nextLogger;
@@ -13,11 +9,13 @@ public abstract class AbstractLogger {
 		this.nextLogger =logger;
 	}
 	
-	public void logMessage(int level, String Message){
-		if(this.level<=level)
-			writeMessage(Message);
+	public void logMessage(int level, String message){
+		if(this.level==level)
+			writeMessage(message);
 		else if(nextLogger!=null){
-			nextLogger.logMessage(level, Message);
+			nextLogger.logMessage(level, message);
+		} else {
+			System.out.println("Default Logger: "+message);
 		}
 	}
 	
