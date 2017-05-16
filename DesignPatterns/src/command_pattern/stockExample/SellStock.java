@@ -1,4 +1,4 @@
-package command_pattern;
+package command_pattern.stockExample;
 
 public class SellStock implements Command {
 

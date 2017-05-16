@@ -1,4 +1,4 @@
-package command_pattern;
+package command_pattern.stockExample;
 
 import java.util.ArrayList;
 import java.util.List;
