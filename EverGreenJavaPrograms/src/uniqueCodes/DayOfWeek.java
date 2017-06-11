@@ -1,4 +1,4 @@
-package importantCode;
+package uniqueCodes;
 
 public class DayOfWeek {
 
