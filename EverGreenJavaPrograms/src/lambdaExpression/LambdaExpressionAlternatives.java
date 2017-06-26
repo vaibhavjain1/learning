@@ -4,7 +4,7 @@ package lambdaExpression;
  * It basically signifies that this interface is meant for Lambda expression(s) as
  * Lambda expression accepts only those interface which have only one abstrace method. 
 */
-//@FunctionalInterface
+@FunctionalInterface
 interface MyFunctionalInterface {
 	public void printMessage();
 }
