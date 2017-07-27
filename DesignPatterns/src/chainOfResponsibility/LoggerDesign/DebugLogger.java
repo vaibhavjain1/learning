@@ -1,4 +1,4 @@
-package chainOfResponsibility;
+package chainOfResponsibility.LoggerDesign;
 
 public class DebugLogger extends AbstractLogger{
 
