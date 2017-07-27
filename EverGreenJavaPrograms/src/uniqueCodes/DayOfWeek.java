@@ -14,7 +14,7 @@ public class DayOfWeek {
 	}
 
 	public static void main(String[] args) {
-		WeekDay weekday = WeekDay.values()[dow(1991, 05, 20)];
+		WeekDay weekday = WeekDay.values()[dow(1988, 03, 21)];
 		System.out.println(weekday);
 	}
 }

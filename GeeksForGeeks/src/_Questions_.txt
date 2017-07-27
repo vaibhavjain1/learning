@@ -1,0 +1,24 @@
+BTree 
+
+1.  BFS & DFS(In/Pre/Post order)
+2.  MaxHeight
+3.  MaxWidth
+4.  Mirror
+5.  Count leaf node
+6.  Nodes at K distance from root
+7.  Print ancestors of given node
+8.  Print left/Right/Top/Bottom View
+9.  closest leaf
+10. Path with specified sum
+11. Level with maximum sum
+12. Print ancestors of a node
+13. ZigZag print
+14. Least common ancestor
+15. Path between two nodes
+16. Max sum leaf to root with path
+
+
+
+Binary Search Tree
+1. Binary Search Tree verification
+2. 

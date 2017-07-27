@@ -1,0 +1,83 @@
+package btree;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class PrintKdistance {
+
+	static class Node{
+		int key;
+		Node left;
+		Node right;
+		Node(int key){
+			this.key = key;
+			this.left = null;
+			this.right = null;
+		}
+	}
+	Node root;
+	
+	public void printBFS(){
+		Queue<Node> myList = new LinkedList<>();
+		myList.add(root);
+		BFS(myList);
+	}
+	
+	public void BFS(Queue<Node> nodeList){
+		if (nodeList.isEmpty())
+			return;
+		Node temp = nodeList.poll();
+		System.out.print(temp.key+" -> ");
+		if(temp.left!=null)
+			nodeList.add(temp.left);
+		if (temp.right!=null) 
+			nodeList.add(temp.right);
+		BFS(nodeList);
+	}
+	
+	public void getNodesKdistance(int distance){
+		kDistance(root,distance);
+	}
+	
+	private void kDistance(Node root, int distance) {
+		if (root==null) 
+			return;
+		else{
+			if(distance==0)
+				System.out.println("Value at specified distance "+ root.key);
+			if(root.left!=null)
+			kDistance(root.left, distance-1);
+			if(root.right!=null)
+			kDistance(root.right, distance-1);
+			return;
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		/*
+		 			  1
+		 		   /     \
+		 		  2       3
+		 		/   \   /   \
+		 	   4	 5 6     7
+		 	   		  \		  \
+		 	   		   8	   9
+		 */
+		
+		PrintKdistance obj = new PrintKdistance();
+		obj.root = new Node(1);
+		obj.root.left = new Node(2);
+		obj.root.right = new Node(3);
+		obj.root.left.left = new Node(4);
+		obj.root.left.right = new Node(5);
+		obj.root.right.left = new Node(6);
+		obj.root.right.right = new Node(7);
+		obj.root.right.right.right = new Node(9);
+		obj.root.left.right.right = new Node(8);
+		obj.printBFS();
+		System.out.println();
+		obj.getNodesKdistance(3);
+	}
+
+}
