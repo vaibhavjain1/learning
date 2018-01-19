@@ -5,7 +5,7 @@ import java.util.List;
 
 class Producer implements Runnable {
 
-	Object lock = new Object();
+	Object lock;
 	Buffer obj = new Buffer();
 
 	public Producer(Object lock) {
@@ -26,7 +26,7 @@ class Producer implements Runnable {
 
 class Consumer implements Runnable {
 
-	Object lock = new Object();
+	Object lock;
 	Buffer obj = new Buffer();
 
 	public Consumer(Object lock) {
