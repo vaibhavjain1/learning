@@ -1,0 +1,27 @@
+Arrays
+
+1.1 Implement an algorithm to determine if a string has all unique characters.
+    Without using Datastructure/collection.
+1.2 Given two strings, write a method to decide if one is a permutation of the other.
+1.3 Write a method to replace all spaces in a string with '%20' without extra array.
+    Assuming string has sufficient extra spaces at the end of array to hold extra char
+1.4 Given a string, write a function to check if it is a permutation of a palindrome.
+1.5 Three types of edits can be performed on string: Insert a character, remove a 
+    character or replace a character. Given two strings, write a function to check if
+    they are one or zero edit away.
+    Ex. 
+    pale, ple -> true
+    pales, pale -> true
+    pale, bale -> true
+    pale, bae -> false
+1.6 Implement a method to perform string compression using the counts of repeated
+    characters. If compressed string would not become smaller then return original.
+    ex. aabcccccaaa -> a2b1c5a3
+1.7 Given a image represented by NxN matring, where each pixel in the image is 4 bytes
+    write a method to rotate the image by 90 degress.
+1.8 Write an algorithm such that if an element in a MxN matrix is 0. it's entire row &
+    column are set to 0.
+1.9 Assume you have a method isSubstring which checks if one workd is a substring of
+    another. Given two strings, s1 and s2, write code to check if s2 is a rotation of
+    s1 using only one call to isSubstring.
+    Ex. waterbottle is a rotation of erbottlewat
