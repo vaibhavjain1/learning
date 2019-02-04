@@ -12,6 +12,7 @@ import org.json.simple.JSONObject;
 public class ServletApi {
 
 	@GET
+	// For Post request just change @GET to @POST
 	@Produces(MediaType.TEXT_XML) // Type of Object returned
 	// To call this: http://localhost:8080/RestLoginService/api/restServ
 	public String sayHello(){
