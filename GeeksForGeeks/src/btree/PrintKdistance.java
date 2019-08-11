@@ -1,39 +1,8 @@
 package btree;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class PrintKdistance {
 
-	static class Node{
-		int key;
-		Node left;
-		Node right;
-		Node(int key){
-			this.key = key;
-			this.left = null;
-			this.right = null;
-		}
-	}
 	Node root;
-	
-	public void printBFS(){
-		Queue<Node> myList = new LinkedList<>();
-		myList.add(root);
-		BFS(myList);
-	}
-	
-	public void BFS(Queue<Node> nodeList){
-		if (nodeList.isEmpty())
-			return;
-		Node temp = nodeList.poll();
-		System.out.print(temp.key+" -> ");
-		if(temp.left!=null)
-			nodeList.add(temp.left);
-		if (temp.right!=null) 
-			nodeList.add(temp.right);
-		BFS(nodeList);
-	}
 	
 	public void getNodesKdistance(int distance){
 		kDistance(root,distance);
@@ -75,7 +44,7 @@ public class PrintKdistance {
 		obj.root.right.right = new Node(7);
 		obj.root.right.right.right = new Node(9);
 		obj.root.left.right.right = new Node(8);
-		obj.printBFS();
+		Node.printTreeDiagram(obj.root);
 		System.out.println();
 		obj.getNodesKdistance(3);
 	}

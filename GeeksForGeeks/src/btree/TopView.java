@@ -1,27 +1,29 @@
 package btree;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TopView {
 
 	Node root;
 	
-	public void printTopView(){
-		printleftView(root);
-		printrightView(root);
-	}
-	
-	private void printrightView(Node root) {
-		if(root==null)
-			return;
-		if(this.root!=root)
-		System.out.println(root.key+" -> ");
-		printrightView(root.right);
+	public static void printTopView(Node root) {
+		Map<Integer,Integer> myMap = new HashMap<>();
+		horizontalDistance(root, 0, myMap);
 	}
 
-	private void printleftView(Node root) {
-		if(root==null)
+	public static void horizontalDistance(Node root, int dist, Map<Integer, Integer> myMap) {
+		if(root ==null)
 			return;
-		System.out.println(root.key+" -> ");
-		printleftView(root.left);
+		else {
+			if(myMap.get(dist)==null) {
+				myMap.put(dist, root.key);
+				System.out.println(root.key);
+			}
+			horizontalDistance(root.left, dist-1, myMap);
+			horizontalDistance(root.right, dist+1, myMap);
+		}
+	
 	}
 
 	public static void main(String[] args) {
@@ -44,7 +46,8 @@ public class TopView {
 		obj.root.right.left = new Node(6);
 		obj.root.right.right = new Node(7);
 		obj.root.right.right.right = new Node(8);
-		obj.printTopView();
+		Node.printTreeDiagram(obj.root);
+		obj.printTopView(obj.root);
 	}
 	
 }

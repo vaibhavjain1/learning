@@ -7,23 +7,6 @@ public class MaxHeightBTree {
 
 	Node root;
 	
-	public void printBFS(){
-		Queue<Node> myList = new LinkedList<>();
-		myList.add(root);
-		BFS(myList);
-	}
-	public void BFS(Queue<Node> nodeList){
-		if (nodeList.isEmpty())
-			return;
-		Node temp = nodeList.poll();
-		System.out.print(temp.key+" -> ");
-		if(temp.left!=null)
-			nodeList.add(temp.left);
-		if (temp.right!=null) 
-			nodeList.add(temp.right);
-		BFS(nodeList);
-	}
-	
 	public void getMaxHeight(){
 		int maxheight = maxHeight(root,0);
 		System.out.println("Max height of the tree :"+maxheight);
@@ -60,7 +43,7 @@ public class MaxHeightBTree {
 		obj.root.right.left = new Node(6);
 		obj.root.right.right = new Node(7);
 		obj.root.right.right.right = new Node(8);
-		obj.printBFS();
+		Node.printTreeDiagram(obj.root);
 		System.out.println();
 		obj.getMaxHeight();
 	}

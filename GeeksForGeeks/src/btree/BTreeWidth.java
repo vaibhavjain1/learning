@@ -1,40 +1,37 @@
 package btree;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class BTreeWidth {
 
 	Node root;
 	
-	public void printBFS(){
-		Queue<Node> myList = new LinkedList<>();
-		myList.add(root);
-		BFS(myList);
-	}
-	public void BFS(Queue<Node> nodeList){
-		if (nodeList.isEmpty())
-			return;
-		Node temp = nodeList.poll();
-		System.out.print(temp.key+" -> ");
-		if(temp.left!=null)
-			nodeList.add(temp.left);
-		if (temp.right!=null) 
-			nodeList.add(temp.right);
-		BFS(nodeList);
-	}
-	
 	public void getMaxWidth(){
-		int maxWidthOfTree = maxWidhth(root,0);
+		Map<Integer,Integer> widthMap = new HashMap<>();
+		traverseTreeWithHeight(root,0, widthMap);
+		Set<Entry<Integer, Integer>> entrySet = widthMap.entrySet();
+		int maxWidthOfTree = 0;
+		for (Entry<Integer, Integer> entry : entrySet) {
+			if(entry.getValue()>maxWidthOfTree)
+				maxWidthOfTree = entry.getValue();
+		}
 		System.out.println("Max width of the tree :"+maxWidthOfTree);
 	}
 	
-	private int maxWidhth(Node root, int height) {
+	private int traverseTreeWithHeight(Node root, int height, Map<Integer,Integer> widthMap) {
 		if (root==null) 
 			return height;
 		else{
-			int lheight = maxWidhth(root.left, height+1);
-			int rheight = maxWidhth(root.right, height+1);
+			if(widthMap.get(height)==null)
+				widthMap.put(height, 1);
+			else
+				widthMap.put(height, widthMap.get(height)+1);
+
+			int lheight = traverseTreeWithHeight(root.left, height+1, widthMap);
+			int rheight = traverseTreeWithHeight(root.right, height+1, widthMap);
 			return Math.max(lheight,rheight);
 		}
 		
@@ -60,7 +57,7 @@ public class BTreeWidth {
 		obj.root.right.left = new Node(6);
 		obj.root.right.right = new Node(7);
 		obj.root.right.right.right = new Node(8);
-		obj.printBFS();
+		Node.printTreeDiagram(obj.root);
 		System.out.println();
 		obj.getMaxWidth();
 	}

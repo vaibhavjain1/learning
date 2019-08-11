@@ -3,23 +3,13 @@ package btree;
 
 public class LevelOfANode {
 
-	static class Node{
-		int key;
-		Node left, right;
-		Node(int key){
-			this.key = key;
-			this.left = null;
-			this.right = null;
-		}
-	}
-
 	Node root;
 	
 	boolean notfound = true;
 	int currLevel = 1;
 	
-	public void getLevelOfNode(){
-		getLevel(root, currLevel, 4);
+	public void getLevelOfNode(int keytobesearched){
+		getLevel(root, currLevel, keytobesearched);
 		if(notfound)
 			System.out.println("Key not found level:0");
 	}
@@ -46,7 +36,9 @@ public class LevelOfANode {
 		obj.root.left.right = new Node(5);
 		obj.root.right.left = new Node(6);
 		obj.root.right.right = new Node(7);
-		obj.getLevelOfNode();
+		Node.printTreeDiagram(obj.root);
+		
+		obj.getLevelOfNode(7);
 	}
 
 }

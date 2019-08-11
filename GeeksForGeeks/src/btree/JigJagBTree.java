@@ -44,7 +44,11 @@ public class JigJagBTree {
 	
 	public static void main(String[] args) {
 		/*
-		 			     1
+		 			    1
+		 			   / \ 
+		 			  /   \
+		 			 /     \
+		 			/       \
 		 		   /         \
 		 		  2           3
 		 		/   \       /   \
@@ -52,7 +56,7 @@ public class JigJagBTree {
 		 	  / \   / \   / \   / \
 		 	 8   9 10 11 12 13 14 15
 		 */
-		
+
 		JigJagBTree obj = new JigJagBTree();
 		obj.root = new Node(1);
 		obj.root.left = new Node(2);
