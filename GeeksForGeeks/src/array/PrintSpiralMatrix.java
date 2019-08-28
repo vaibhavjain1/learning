@@ -1,4 +1,4 @@
-package practise.btree;
+package array;
 
 public class PrintSpiralMatrix {
 
