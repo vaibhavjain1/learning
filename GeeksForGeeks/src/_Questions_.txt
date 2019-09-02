@@ -8,7 +8,7 @@ BTree
 6.  Nodes at K distance from root
 7.  Print ancestors of given node
 8.  Print left/Right/Top/Bottom View
-9.  closest leaf
+9.  Closest leaf
 10. Path with specified sum
 11. Level with maximum sum
 12. Print ancestors of a node
@@ -16,9 +16,31 @@ BTree
 14. Least common ancestor
 15. Path between two nodes
 16. Max sum leaf to root with path
-
-
+17. Print Boundary nodes of a tree
+18. Print all k-sum paths in a binary tree
+19. Print all the boundary nodes in an anti-clockwise direction starting from the root.
+20. Print Vertical sum of Nodes
+21. Swap adjacent leaf nodes.
 
 Binary Search Tree
 1. Binary Search Tree verification
 2. 
+
+Linked List
+1. Print nth node from beginning and end in single pass.
+2. Deletion Operation on Doubly Linked-list, Cover all the test Case.
+3. Design a stack(Push & Pop) using linked list maintaining order.
+4. Remove duplicate objects from an unsorted linked list(use hashing).
+5. Pairwise swap elements of a given linked list.
+6. Find intersection of two linked list forming a Y type structure.
+7. Find length of loop in linked list.
+
+Array
+1. First non-repeating character using one traversal of string
+2. N Queens problem
+3. Print Spiral Matrix
+
+Amazon - https://www.geeksforgeeks.org/Amazon-topics-interview-preparation/
+1. Trapping Water
+2. Count islands with biggest island
+3. Sparse number - Number without consecutive ones in binary representation.

@@ -35,7 +35,6 @@ public class LeftViewBTree {
 		
 		LeftViewBTree obj = new LeftViewBTree();
 		obj.root = new Node(1);
-		obj.root = new Node(1);
 		obj.root.left = new Node(2);
 		obj.root.right = new Node(3);
 		obj.root.left.left = new Node(4);

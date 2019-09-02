@@ -2,7 +2,7 @@ package crackingcoding.arrays;
 
 import java.util.Random;
 
-public class SetRowColumnZero {
+public class SetRowColumnZero_1_8 {
 
 	public static void main(String[] args) {
 		int m=3,n=3;

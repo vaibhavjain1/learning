@@ -15,14 +15,10 @@
 						http://www.springframework.org/schema/tx 
 						http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
-	<context:annotation-config/>
-	<bean name="beandemo" class="autowire.DemoAutowire"/>
-	<bean name="beanId" class="beanContext.MainMessage">
-		<property name="message" value="Hello World!" />
-	</bean>
-	<bean name="studentBean" class="autowire.Employee">
-		<constructor-arg type="int" value="20" />
-		<constructor-arg type="java.lang.String" value="Batra" />
-	</bean>
+	<!--  Resource file for Dependency Injection test -->
+	<import resource="./dependencyInjection/di-services.xml"/>
+
+	<!--  Resource file for Autowire test -->
+	<import resource="./autowire/autowire-services.xml"/>
 
 </beans>

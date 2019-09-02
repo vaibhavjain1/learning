@@ -17,6 +17,8 @@ public class CompressString_1_6 {
 		System.out.println(getCompressedString(tobeCompressed3));
 	}
     
+	// The solution lies in using String builder as string concatenation uses
+	// o(n2). String builder creates new array only when neccessary
 	public static String getCompressedString(String tempi){
 		char[] toCompress = tempi.toCharArray();
 		StringBuilder sb = new StringBuilder();

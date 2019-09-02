@@ -16,7 +16,7 @@ public class SwapNodesWithoutSwappingData {
 
 	public void printLinkedList() {
 		Node temp = head;
-		System.out.println("------Linked List------");
+		System.out.println("\n------Linked List------");
 		while (temp != null) {
 			System.out.print(temp.value);
 			temp = temp.next;
@@ -38,8 +38,45 @@ public class SwapNodesWithoutSwappingData {
 		}
 	}
 	
-	public void swapNodesWithoutChangingData(int first,int second){
-		// TODO
+	public void swapNodesWithoutChangingData(int first, int second) {
+		Node start = this.head;
+		Node swap1 = null, swap2 = null, prevswap1 = null, prevswap2 = null;
+
+		if (start.value == first)
+			swap1 = start;
+		if (start.value == second)
+			swap2 = start;
+
+		while (start.next != null) {
+			if (start.next.value == first) {
+				prevswap1 = start;
+				swap1 = start.next;
+			}
+			if (start.next.value == second) {
+				prevswap2 = start;
+				swap2 = start.next;
+			}
+			start = start.next;
+		}
+
+		if (swap1 == null || swap2 == null || swap1 == swap2)
+			return;
+
+		if (prevswap1 != null) {
+			prevswap1.next = swap2;
+		} else {
+			this.head = swap2;
+		}
+		if (prevswap2 != null) {
+			prevswap2.next = swap1;
+		} else {
+			this.head = swap1;
+		}
+		// Swapping
+
+		start = swap1.next;
+		swap1.next = swap2.next;
+		swap2.next = start;
 	}
 
 	public static void main(String[] args) {
