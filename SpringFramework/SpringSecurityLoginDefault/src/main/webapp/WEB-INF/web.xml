@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
-	<display-name>Spring Security Application</display-name>
+	<display-name>Spring Security Default Login Application</display-name>
 
 	<!-- Spring MVC -->
 	<servlet>

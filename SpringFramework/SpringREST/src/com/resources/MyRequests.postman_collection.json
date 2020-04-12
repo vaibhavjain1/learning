@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "c55d07c3-f0ca-4936-9b77-dbf0b4c265fc",
+		"name": "MyRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/SpringREST/postobject",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Samwise\",\n    \"role\": \"gardener\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/SpringREST/postobject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SpringREST",
+						"postobject"
+					]
+				},
+				"description": "postRequest"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
