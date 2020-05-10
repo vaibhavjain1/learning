@@ -12,6 +12,7 @@
 	<artifactId>SpringBOOT</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBOOT</name>
+	<packaging>war</packaging>
 	<description>Spring Security on Spring Boot</description>
 
 	<properties>
