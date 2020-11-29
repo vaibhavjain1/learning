@@ -1,6 +1,5 @@
 package multiThreading.semaphores;
 
-import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
 
 class ProducerSema implements Runnable{
@@ -79,7 +78,6 @@ class Mysemaphore implements Runnable{
 
 public class SemaphoresOddEven {
 	static volatile int i = 0;
-	
 	
 	public static void main(String[] args) {
 		Semaphore evensema = new Semaphore(1);

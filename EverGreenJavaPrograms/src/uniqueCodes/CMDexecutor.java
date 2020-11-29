@@ -9,6 +9,10 @@ public class CMDexecutor {
 	public static void main(String[] args) throws IOException {
 		Runtime rt = Runtime.getRuntime();
 		String[] commands = {"cmd.exe","/c","net start RepoSrvEvents"};
+		
+		//For Linux/Mac
+		//String[] commands = {"bash","-c","net start RepoSrvEvents"};
+		
 		Process proc = rt.exec(commands);
 
 		BufferedReader stdInput = new BufferedReader(new 

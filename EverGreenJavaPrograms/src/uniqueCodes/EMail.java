@@ -11,21 +11,17 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class EMail {
-
+	public static final String TO_EMAIL = "abvaibhav@gmail.com"; // Recipient's email ID needs to be mentioned.
+	public static final String USERNAME = "_mainaccount@jobserviceprovider.com";
+	public static final String PASSWORD = "e)9Nh~5D_3";
+	
 	public static void main(String[] args) {
-		// Sender's email ID needs to be mentioned
-		String username = "abvaibhav@gmail.com";
-		String password = "";
-
-		// Recipient's email ID needs to be mentioned.
-		String to = "abvaibhav@gmail.com";
-
-		Properties prop = setupGMailServerSSL();
+		Properties prop = setupSMTPDetails();
 
 		// Get the default Session object.
 		Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(username, password);
+				return new PasswordAuthentication(USERNAME, PASSWORD);
 			}
 		});
 
@@ -35,10 +31,10 @@ public class EMail {
 			MimeMessage message = new MimeMessage(session);
 
 			// Set From: header field of the header.
-			message.setFrom(new InternetAddress(username));
+			message.setFrom(new InternetAddress(USERNAME));
 
 			// Set To: header field of the header.
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress(TO_EMAIL));
 
 			// Set Subject: header field
 			message.setSubject("This is the Subject Line!");
@@ -54,7 +50,17 @@ public class EMail {
 		}
 	}
 
-	//https://myaccount.google.com/lesssecureapps
+	private static Properties setupSMTPDetails() {
+		// Get system properties
+		Properties prop = System.getProperties();
+
+		// Setup mail server
+		prop.put("mail.smtp.host", "mail.jobserviceprovider.com");
+		prop.put("mail.smtp.port", "465");
+		prop.put("mail.smtp.auth", "true");
+		prop.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+		return prop;
+	}	
 	
 	private static Properties setupGMailServerSSL() {
 		// Get system properties
@@ -80,5 +86,4 @@ public class EMail {
 		prop.put("mail.smtp.starttls.enable", "true");
 		return prop;
 	}
-
 }

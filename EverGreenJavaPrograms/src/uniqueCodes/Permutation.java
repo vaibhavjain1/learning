@@ -4,12 +4,24 @@ package uniqueCodes;
 //given string.
 //https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/
 
+/*
+					A|B|C
+				/	  |    \
+			/		  |			\
+		/     		  |     		\
+	A|B|C			B|A|C		  C|A|B
+	/	\			/	\		  /	  \
+A|B|C	A|C|B	B|A|C	B|C|A   C|A|B C|B|A 
+*/
+
 public class Permutation {
 	public static void main(String[] args) {
 		String str = "ABC";
 		int n = str.length();
 		Permutation permutation = new Permutation();
 		permutation.permute(str, 0, n - 1);
+		System.out.println("---------");
+		permutation.permutationByVaibhav(str, 0, n-1);
 	}
 
 	/**
@@ -54,4 +66,15 @@ public class Permutation {
 		return String.valueOf(charArray);
 	}
 
+	public void permutationByVaibhav(String mytest, int start, int end) {
+		if(start==end) // return if reached end
+			return;
+		for (int i = start; i <=end ; i++) {
+			mytest = swap(mytest, i, start);
+			if(start+1==end) // Print only leaf node.Check if it's last iteration
+				System.out.println(mytest);
+			permutationByVaibhav(mytest, start+1, end);
+			swap(mytest, start, i); //swap back
+		}
+	}
 }

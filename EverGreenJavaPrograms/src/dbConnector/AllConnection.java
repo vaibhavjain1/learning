@@ -7,17 +7,17 @@ import java.sql.SQLException;
 public class AllConnection {
 
 	public static void main(String[] args) throws SQLException {
-		String serverName = "10.220.200.206";
-		Integer serverPort = 1433;
-		String databaseName = "master";
-		String userName = "sa";
-		String password= "Admin1234";
+		String serverName = "localhost";
+		Integer serverPort = 3306;
+		String databaseName = "wordpress";
+		String userName = "admin";
+		String password= "admin";
 		boolean isWindowAuth = false;
 		String domain = "EMBARCADERO";
 		
 		String sqlJdbcDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 		String sqlJtdsDriver = "net.sourceforge.jtds.jdbc.Driver";
-		String mySqlDriver = "com.mysql.jdbc.driver";
+		String mySqlDriver = "com.mysql.jdbc.Driver";
 		String postgresDriver = "org.postgresql.driver";
 		String oracleDriver = "oracle.jdbc.driver.oracledriver";
 		
@@ -33,7 +33,7 @@ public class AllConnection {
 		Connection con = null;
 		try {
 			System.out.println("ConnectionURL:"+ sqlJtdsUrl);
-			Class.forName(sqlJtdsDriver);
+			Class.forName(mySqlDriver);
 			con = DriverManager.getConnection(sqlJtdsUrl, userName, password);
 			System.out.println("Connection created successfully");
 		} catch (Exception e) {
