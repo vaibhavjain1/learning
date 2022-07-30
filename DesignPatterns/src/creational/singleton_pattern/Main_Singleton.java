@@ -1,12 +1,8 @@
-package singleton_pattern;
+package creational.singleton_pattern;
 
 public class Main_Singleton {
 
 	public static void main(String[] args) {
-		Singleton a = Singleton.getInstance();
-		Singleton b = Singleton.getInstance();
-		Singleton c = Singleton.getInstance();
-		
 		// We can create Eagerly instance. In this approach we rely on JCM to create the uniquie instance of the singleton
 		// when the class is loaded. The JVM guarantees that the instance will be created before any thread accesses the static
 		// unique instance.

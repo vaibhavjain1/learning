@@ -1,4 +1,4 @@
-package singleton_pattern.enumSingleton;
+package creational.singleton_pattern;
 
 enum MySingleton{
 	INSTANCE;

@@ -1,4 +1,4 @@
-package singleton_pattern;
+package creational.singleton_pattern;
 
 public class Singleton_Double_Checked_Locking {
 	private volatile static Singleton_Double_Checked_Locking uniqueInstance;
@@ -6,7 +6,9 @@ public class Singleton_Double_Checked_Locking {
 	//when it is being initialized to the singleton instance
 	
 	private Singleton_Double_Checked_Locking(){
-		
+		//Since we are making constructor private. No other class can instantiate it.
+		if (uniqueInstance != null)
+			throw new RuntimeException("You cannot create new instance of Singleton using reflection");
 	}
 	
 	public static Singleton_Double_Checked_Locking getInstance(){
@@ -18,7 +20,6 @@ public class Singleton_Double_Checked_Locking {
 				}
 					
 			}
-			
 		}
 		return uniqueInstance;
 	}

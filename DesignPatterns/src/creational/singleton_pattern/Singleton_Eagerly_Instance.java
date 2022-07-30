@@ -1,4 +1,4 @@
-package singleton_pattern;
+package creational.singleton_pattern;
 
 public class Singleton_Eagerly_Instance {
 
