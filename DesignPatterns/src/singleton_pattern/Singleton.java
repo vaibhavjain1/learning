@@ -3,7 +3,7 @@ package singleton_pattern;
 class Singleton
 {
 	private static Singleton uniqueInstance;
-	private String test;
+
 	private Singleton()
 	{
 		//Since we are making constructor private. No other class can instantiate it.
