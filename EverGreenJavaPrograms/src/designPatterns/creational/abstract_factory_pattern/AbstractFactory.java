@@ -1,4 +1,4 @@
-package creational.abstract_factory_pattern;
+package designPatterns.creational.abstract_factory_pattern;
 
 import creational.abstract_factory_pattern.bank.Bank;
 import creational.abstract_factory_pattern.loan.Loan;

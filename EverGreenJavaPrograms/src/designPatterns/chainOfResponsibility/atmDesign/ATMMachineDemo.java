@@ -1,4 +1,4 @@
-package chainOfResponsibility.atmDesign;
+package designPatterns.chainOfResponsibility.atmDesign;
 
 public class ATMMachineDemo {
 	

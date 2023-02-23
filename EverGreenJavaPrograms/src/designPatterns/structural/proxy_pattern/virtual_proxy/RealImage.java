@@ -1,4 +1,4 @@
-package proxy_pattern;
+package structural.proxy_pattern.virtual_proxy;
 
 public class RealImage implements Image {
 

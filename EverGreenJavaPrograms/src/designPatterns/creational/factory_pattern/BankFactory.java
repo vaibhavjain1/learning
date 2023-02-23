@@ -1,4 +1,4 @@
-package creational.factory_pattern;
+package designPatterns.creational.factory_pattern;
 
 public class BankFactory {
 
