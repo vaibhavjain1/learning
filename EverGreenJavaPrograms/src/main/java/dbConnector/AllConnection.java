@@ -13,7 +13,7 @@ public class AllConnection {
 		String userName = "admin";
 		String password= "admin";
 		boolean isWindowAuth = false;
-		String domain = "EMBARCADERO";
+		String domain = "DomainName";
 		
 		String sqlJdbcDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 		String sqlJtdsDriver = "net.sourceforge.jtds.jdbc.Driver";
