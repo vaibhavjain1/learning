@@ -1,4 +1,4 @@
-package command_pattern.stockExample;
+package designPatterns.behavioral.command_pattern.stockExample;
 
 import java.util.ArrayList;
 import java.util.List;

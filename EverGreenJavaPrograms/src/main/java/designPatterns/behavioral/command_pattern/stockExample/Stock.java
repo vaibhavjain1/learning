@@ -1,4 +1,4 @@
-package command_pattern.stockExample;
+package designPatterns.behavioral.command_pattern.stockExample;
 
 public class Stock {
 

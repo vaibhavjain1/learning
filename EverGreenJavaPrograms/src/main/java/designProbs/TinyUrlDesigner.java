@@ -1,4 +1,4 @@
-package designProbs.tinyUrl;
+package designProbs;
 
 public class TinyUrlDesigner {
 	private static final String ALPHABET_MAP = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" ;

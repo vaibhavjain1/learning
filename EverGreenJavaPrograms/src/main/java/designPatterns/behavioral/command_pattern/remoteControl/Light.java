@@ -1,4 +1,4 @@
-package command_pattern.remoteControl;
+package designPatterns.behavioral.command_pattern.remoteControl;
 
 public class Light {
 

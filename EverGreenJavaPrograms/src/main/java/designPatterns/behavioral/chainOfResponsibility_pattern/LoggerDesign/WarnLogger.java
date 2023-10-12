@@ -1,4 +1,4 @@
-package chainOfResponsibility.LoggerDesign;
+package designPatterns.behavioral.chainOfResponsibility_pattern.LoggerDesign;
 
 public class WarnLogger extends AbstractLogger{
 

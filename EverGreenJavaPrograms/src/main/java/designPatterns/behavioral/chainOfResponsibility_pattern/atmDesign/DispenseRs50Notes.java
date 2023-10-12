@@ -1,4 +1,4 @@
-package designPatterns.behavioral.chainOfResponsibility.atmDesign;
+package designPatterns.behavioral.chainOfResponsibility_pattern.atmDesign;
 
 public class DispenseRs50Notes implements DispenseCurrency {
 	private DispenseCurrency nextChain;
