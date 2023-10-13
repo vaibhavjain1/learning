@@ -37,7 +37,7 @@ class Circle implements Shape {
 
 //Flyweight factory class
 class ShapeFactory {
- private static final HashMap<String, Shape> circleMap = new HashMap<String, Shape>();
+ private static final HashMap<String, Shape> circleMap = new HashMap<>();
 
  public static Shape getCircle(String color) {
      Circle circle = (Circle)circleMap.get(color);
@@ -56,27 +56,27 @@ class ShapeFactory {
 
 //Client code
 public class Flyweight {
- private static final String[] colors = {"Red", "Green", "Blue"};
+    private static final String[] colors = {"Red", "Green", "Blue"};
 
- public static void main(String[] args) {
-     for (int i = 0; i < 20; i++) {
-         Circle circle = (Circle)ShapeFactory.getCircle(getRandomColor());
-         circle.setX(getRandomX());
-         circle.setY(getRandomY());
-         circle.setRadius(100);
-         circle.draw();
-     }
- }
+    private static String getRandomColor() {
+        return colors[(int) (Math.random() * colors.length)];
+    }
 
- private static String getRandomColor() {
-     return colors[(int)(Math.random() * colors.length)];
- }
+    private static int getRandomX() {
+        return (int) (Math.random() * 100);
+    }
 
- private static int getRandomX() {
-     return (int)(Math.random() * 100);
- }
+    private static int getRandomY() {
+        return (int) (Math.random() * 100);
+    }
 
- private static int getRandomY() {
-     return (int)(Math.random() * 100);
- }
+    public static void main(String[] args) {
+        for (int i = 0; i < 20; i++) {
+            Circle circle = (Circle) ShapeFactory.getCircle(getRandomColor());
+            circle.setX(getRandomX());
+            circle.setY(getRandomY());
+            circle.setRadius(100);
+            circle.draw();
+        }
+    }
 }

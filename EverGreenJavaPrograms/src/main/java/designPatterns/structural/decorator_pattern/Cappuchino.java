@@ -1,4 +1,4 @@
-package decorator_pattern;
+package designPatterns.structural.decorator_pattern;
 
 public class Cappuchino implements Coffee {
 

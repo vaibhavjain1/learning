@@ -1,5 +1,6 @@
 package designPatterns.structural.bridge_pattern.gpt;
 
+// best bridge design pattern https://www.digitalocean.com/community/tutorials/bridge-design-pattern-java
 //The Abstraction class
 abstract class Shape {
  protected DrawAPI drawAPI;
