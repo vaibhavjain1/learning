@@ -6,8 +6,9 @@ import java.util.Map;
 public class TopView {
 
 	Node root;
-	
-	public static void printTopView(Node root) {
+
+	//wrong code
+	/*public static void printTopView(Node root) {
 		Map<Integer,Integer> myMap = new HashMap<>();
 		horizontalDistance(root, 0, myMap);
 	}
@@ -24,7 +25,7 @@ public class TopView {
 			horizontalDistance(root.right, dist+1, myMap);
 		}
 	
-	}
+	}*/
 
 	public static void main(String[] args) {
 		/*
@@ -47,7 +48,7 @@ public class TopView {
 		obj.root.right.right = new Node(7);
 		obj.root.right.right.right = new Node(8);
 		Node.printTreeDiagram(obj.root);
-		obj.printTopView(obj.root);
+		//obj.printTopView(obj.root);
 	}
 	
 }

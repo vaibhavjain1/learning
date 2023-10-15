@@ -1,6 +1,8 @@
 BTree 
 
 1.  BFS & DFS(In/Pre/Post order)
+2.  Distance of Nodes (required for views, maxwidth)
+2.  View(Top/Bottom/Left/Right)
 2.  MaxHeight
 3.  MaxWidth
 4.  Mirror
