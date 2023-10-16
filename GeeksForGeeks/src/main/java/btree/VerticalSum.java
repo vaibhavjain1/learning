@@ -51,15 +51,14 @@ public class VerticalSum {
 		So expected output is 4, 2, 12, 3 and 7
 		*/
 
-		TopView obj = new TopView();
-		obj.root = new Node(1);
-		obj.root.left = new Node(2);
-		obj.root.right = new Node(3);
-		obj.root.left.left = new Node(4);
-		obj.root.left.right = new Node(5);
-		obj.root.right.left = new Node(6);
-		obj.root.right.right = new Node(7);
-		Node.printTreeDiagram(obj.root);
-		printVerticalSum(obj.root);
+		Node root = new Node(1);
+		root.left = new Node(2);
+		root.right = new Node(3);
+		root.left.left = new Node(4);
+		root.left.right = new Node(5);
+		root.right.left = new Node(6);
+		root.right.right = new Node(7);
+		Node.printTreeDiagram(root);
+		printVerticalSum(root);
 	}
 }
