@@ -9,11 +9,10 @@ BTree
 7.  Count leaf node
 8.  Nodes at K distance from root
 9.  Print ancestors of given node
-
-9.  Closest leaf
 10. Path with specified sum
 11. Level with maximum sum
 12. Print ancestors of a node
+
 13. ZigZag print
 14. Least common ancestor
 15. Path between two nodes
@@ -23,6 +22,7 @@ BTree
 19. Print all the boundary nodes in an anti-clockwise direction starting from the root.
 20. Print Vertical sum of Nodes
 21. Swap adjacent leaf nodes.
+22. Print distance of the closest leaf node (the closest leaf may be present in another subtree)
 
 Binary Search Tree
 1. Binary Search Tree verification
