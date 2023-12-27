@@ -6,6 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>EverGreenJavaPrograms</module>
+        <module>GeeksForGeeks</module>
     </modules>
 
     <packaging>pom</packaging>
