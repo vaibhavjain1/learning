@@ -2,7 +2,7 @@ package designPatterns.creational.singleton_pattern;
 
 enum MySingleton{
 	INSTANCE;
-	private MySingleton(){
+	MySingleton(){
 		System.out.println("Created single instance for Singleton");
 	}
 }
