@@ -1,4 +1,4 @@
-package observer_pattern;
+package designPatterns.behavioral.observer_pattern;
 
 public class BinaryObserver implements Observer{
 		private Subject subject;

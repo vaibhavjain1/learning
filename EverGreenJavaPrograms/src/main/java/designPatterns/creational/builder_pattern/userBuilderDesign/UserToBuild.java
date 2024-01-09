@@ -1,4 +1,4 @@
-package designPatterns.builder_pattern.productionCodeDesign;
+package designPatterns.creational.builder_pattern.userBuilderDesign;
 /*
  * Refrences
  * https://jlordiales.me/2012/12/13/the-builder-pattern-in-practice/
@@ -6,14 +6,14 @@ package designPatterns.builder_pattern.productionCodeDesign;
  */
 
 	
-public class User_ProductionCode1 {
+public class UserToBuild {
 	private final String firstName; // required
 	private final String lastName; // required
 	private final int age; // optional
 	private final String phone; // optional
 	private final String address; // optional
 
-	private User_ProductionCode1(UserBuilder builder) {
+	private UserToBuild(UserBuilder builder) {
 		this.firstName = builder.firstName;
 		this.lastName = builder.lastName;
 		this.age = builder.age;
@@ -68,14 +68,14 @@ public class User_ProductionCode1 {
 			return this;
 		}
 
-		public User_ProductionCode1 build() {
-			return new User_ProductionCode1(this);
+		public UserToBuild build() {
+			return new UserToBuild(this);
 		}
 
 	}
 	
 	public static void main(String[] args) {
-		User_ProductionCode1 a =  new User_ProductionCode1.UserBuilder("Jhon", "Doe")
+		UserToBuild a =  new UserToBuild.UserBuilder("Jhon", "Doe")
 			    .age(30)
 			    .phone("1234567")
 			    .address("Fake address 1234")

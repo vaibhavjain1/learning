@@ -1,4 +1,4 @@
-package observer_pattern;
+package designPatterns.behavioral.observer_pattern;
 
 public interface Observer {
 // All potential observers need to implement the observer interface. This interface has just one method, update()
