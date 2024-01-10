@@ -1,4 +1,4 @@
-package strategy_pattern;
+package designPatterns.behavioral.strategy_pattern;
 
 public class NormalBehaviour implements IBehaviour {
 

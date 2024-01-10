@@ -1,4 +1,4 @@
-package strategy_pattern;
+package designPatterns.behavioral.strategy_pattern;
 
 /*
  * Definition: Strategy Pattern defines a family of Algorithm, encapsulates each one and
@@ -7,8 +7,8 @@ package strategy_pattern;
 
 /*
  * Example: 
- * •	java.util.Comparator#compare(), executed by among others Collections#sort().
- * •	javax.servlet.http.HttpServlet, the service() and all doXXX() methods take
+ * ï¿½	java.util.Comparator#compare(), executed by among others Collections#sort().
+ * ï¿½	javax.servlet.http.HttpServlet, the service() and all doXXX() methods take
  *      HttpServletRequest and HttpServletResponse and the implementor has to process
  *      them (and not to get hold of them as instance variables!).
  */
