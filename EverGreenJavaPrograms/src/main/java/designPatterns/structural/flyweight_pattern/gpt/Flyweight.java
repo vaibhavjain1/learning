@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 //Flyweight interface
 interface Shape {
- public void draw();
+    void draw();
 }
 
 //Concrete flyweight class
@@ -30,6 +30,7 @@ class Circle implements Shape {
      this.radius = radius;
  }
 
+ @Override
  public void draw() {
      System.out.println("Drawing a " + color + " circle at (" + x + ", " + y + "), radius " + radius);
  }

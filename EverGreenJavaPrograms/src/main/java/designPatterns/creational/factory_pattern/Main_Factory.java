@@ -14,9 +14,9 @@ public class Main_Factory {
 		Bank bank3 = bankFactory.getBank("PNB");
 		System.out.println(bank3.getBankName());
 		
-	    // if you have many object of the same base type and you manipulate them mostly as abstract objects,
+	    // if you have many object of the same base type, and you manipulate them mostly as abstract objects,
 	    // then you need a factory. Your code should have a lot of code like the following, reconsider it.
 	    if (bank3 instanceof SBI)
-	    		((SBI)bank3).getBankName();		
+			System.out.println((bank3).getBankName());
 	}
 }

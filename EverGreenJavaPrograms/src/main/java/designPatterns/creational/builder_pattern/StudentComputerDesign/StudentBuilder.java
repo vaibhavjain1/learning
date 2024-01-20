@@ -1,4 +1,4 @@
-package builder_pattern.StudentComputerDesign;
+package designPatterns.creational.builder_pattern.StudentComputerDesign;
 
 class Student {
 	private String _name;

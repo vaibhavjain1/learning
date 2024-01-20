@@ -7,6 +7,7 @@
     <modules>
         <module>EverGreenJavaPrograms</module>
         <module>GeeksForGeeks</module>
+        <module>Protobuf</module>
     </modules>
 
     <packaging>pom</packaging>
