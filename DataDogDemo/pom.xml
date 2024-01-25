@@ -7,6 +7,11 @@
     <groupId>org.example</groupId>
     <artifactId>DataDogDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <parent>
+        <groupId>learning</groupId>
+        <artifactId>learning</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
     <dependencies>
         <dependency>
             <groupId>com.datadoghq</groupId>
