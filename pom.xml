@@ -9,6 +9,7 @@
         <module>GeeksForGeeks</module>
         <module>DataDogDemo</module>
 		<module>Protobuf</module>
+        <module>SpringFramework/SpringBOOT</module>
     </modules>
 
     <packaging>pom</packaging>
