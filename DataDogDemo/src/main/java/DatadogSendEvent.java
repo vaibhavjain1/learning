@@ -6,10 +6,9 @@ import com.datadog.api.client.v1.model.EventCreateResponse;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
-public class Example
+public class DatadogSendEvent
 {
     public static void main(String arg[]){
         testDataDog();

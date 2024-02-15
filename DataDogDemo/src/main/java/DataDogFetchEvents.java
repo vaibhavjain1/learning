@@ -1,5 +1,4 @@
 import com.datadog.api.client.ApiClient;
-import com.datadog.api.client.ApiException;
 import com.datadog.api.client.v1.api.EventsApi;
 import com.datadog.api.client.v1.model.Event;
 import org.apache.poi.ss.usermodel.Cell;
@@ -8,17 +7,16 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileOutputStream;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.ZonedDateTime;
 import java.util.*;
 
-public class FetchEvents {
+public class DataDogFetchEvents {
     static boolean append = true;
     public static void main(String[] args) {
         ApiClient defaultClient = new ApiClient();
 
-        HashMap<String, String> secrets = new HashMap<String, String>();
+        HashMap<String, String> secrets = new HashMap<>();
         secrets.put("apiKeyAuth", "");
         secrets.put("appKeyAuth", "");
         defaultClient.configureApiKeys(secrets);
@@ -27,8 +25,8 @@ public class FetchEvents {
         //Blank workbook
         XSSFWorkbook workbook = new XSSFWorkbook();
 
-        //Create a blank sheet
-        XSSFSheet sheet = workbook.createSheet("Stanford");
+        //Create a blank sheet 
+        XSSFSheet sheet = workbook.createSheet("sheet");
 
         //Prepare data to be written as an Object[]
         Map<String, Object[]> data = new LinkedHashMap<>();
@@ -39,9 +37,9 @@ public class FetchEvents {
 
         int sno = 1;
 
-        ZonedDateTime zone = ZonedDateTime.parse("2023-12-18T00:00:00+00:00[UTC]");
+        ZonedDateTime zone = ZonedDateTime.parse("2024-01-01T00:00:00+00:00[UTC]");
         try {
-            while (zone.getYear() == 2023) {
+            while (zone.getMonthValue() < 2) {
                 zone = zone.plusMinutes(5);
 
                 List<Event> events = apiInstance.listEvents(zone.toInstant().getEpochSecond(), zone.plusMinutes(5).toInstant().getEpochSecond(), list).getEvents();
