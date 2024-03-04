@@ -12,7 +12,7 @@
 	<artifactId>SpringBOOT</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBOOT</name>
-	<packaging>war</packaging>
+	<!--packaging>war</packaging-->
 	<description>Spring Security on Spring Boot</description>
 
 	<dependencies>
@@ -20,25 +20,22 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		<!-- For Rest controller -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- For setting up testing -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<!-- For packaging jar/war files, run application -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
