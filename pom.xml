@@ -10,6 +10,7 @@
         <module>DataDogDemo</module>
 		<module>Protobuf</module>
         <module>SpringFramework/SpringBOOT</module>
+        <module>Docker/SampleSpringBootService</module>
     </modules>
 
     <packaging>pom</packaging>
