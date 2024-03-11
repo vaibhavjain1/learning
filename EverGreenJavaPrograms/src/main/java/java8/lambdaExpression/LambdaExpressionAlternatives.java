@@ -1,4 +1,4 @@
-package lambdaExpression;
+package java8.lambdaExpression;
 
 /* @FunctionInterface annotation makes it mandatory to have only one abstract method.
  * It basically signifies that this interface is meant for Lambda expression(s) as

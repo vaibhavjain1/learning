@@ -1,7 +1,8 @@
-package lambdaExpression;
+package java8.lambdaExpression;
 
+@FunctionalInterface
 interface LambdaInterface{
-	public int performTask(int a,int b);
+	int performTask(int a,int b);
 }
 
 public class LambdaExpressionUsage {
