@@ -11,3 +11,5 @@
 /Protobuf/target
 /DataDogDemo/target
 /Docker/SampleSpringBootService/target
+*.iml
+*/target/**
