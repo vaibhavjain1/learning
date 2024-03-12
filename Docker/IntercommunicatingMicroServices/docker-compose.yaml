@@ -1,0 +1,14 @@
+version: '3'
+services:
+  microservice1:
+    image: microservice1
+    ports:
+      - "8010:8010"
+    build: ./MicroService1
+  microservice2:
+    depends_on:
+      - microservice1
+    image: microservice2
+    ports:
+      - "8020:8020"
+    build: ./MicroService2

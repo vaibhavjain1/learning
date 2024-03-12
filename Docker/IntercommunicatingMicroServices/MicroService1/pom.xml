@@ -9,9 +9,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>docker</groupId>
-	<artifactId>SampleSpringBootService</artifactId>
+	<artifactId>MicroService1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SampleSpringBootService</name>
+	<name>MicroService1</name>
 	<!--packaging>war</packaging-->
 	<description>Spring Security on Spring Boot</description>
 
