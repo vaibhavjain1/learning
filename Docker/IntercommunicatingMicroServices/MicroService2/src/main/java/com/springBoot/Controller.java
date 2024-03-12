@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
     @GetMapping("/service-health")
     public String serviceHealth(){
-        return "Service is up";
+        return "MicroService2 is up";
     }
 }

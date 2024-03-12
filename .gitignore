@@ -11,5 +11,9 @@
 /Protobuf/target
 /DataDogDemo/target
 /Docker/SampleSpringBootService/target
-*.iml
+/target/
 */target/**
+**/META-INF/
+*.iws
+*.iml
+*.ipr
