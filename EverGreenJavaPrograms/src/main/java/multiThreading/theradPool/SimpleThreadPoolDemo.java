@@ -30,9 +30,7 @@ public class SimpleThreadPoolDemo {
 			serv.execute(new ThreadImplementation(String.valueOf(i)));
 		}
 		serv.shutdown();
-		while (!serv.isTerminated()) {
-
-		}
+		while (!serv.isTerminated()) {}
 		System.out.println("All threads finished");
 	}
 }

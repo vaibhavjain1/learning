@@ -14,7 +14,7 @@ public class Employee {
       this.name = name;
       this.dept = dept;
       this.salary = sal;
-      subordinates = new ArrayList<Employee>();
+      subordinates = new ArrayList<>();
    }
 
    public void add(Employee e) {

@@ -5,7 +5,7 @@ import java.util.List;
 
 //Component interface
 interface Employee {
- public void showDetails();
+ void showDetails();
 }
 
 //Leaf class
