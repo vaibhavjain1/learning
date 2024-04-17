@@ -11,6 +11,7 @@
 /Protobuf/target
 /DataDogDemo/target
 /Docker/SampleSpringBootService/target
+/Docker/**/target/
 /target/
 */target/**
 **/META-INF/
