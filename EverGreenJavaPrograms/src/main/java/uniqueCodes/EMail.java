@@ -12,11 +12,12 @@ import javax.mail.internet.MimeMessage;
 
 public class EMail {
 	public static final String TO_EMAIL = "vaibhav.jain@insightsoftware.com"; // Recipient's email ID needs to be mentioned.
+	public static final String FROM_EMAIL = "mailer@tidemark.com"; // Sender's email ID needs to be mentioned.
 	public static final String USERNAME = "AKIAJD37OTCNKAMVAVGQ";
 	public static final String PASSWORD = "Aog0zbpnAr/uTLB2XDPweb02ebz2IjnS9xCIVa+Qtgco";
 	
 	public static void main(String[] args) {
-		Properties prop = setupLegacyInsightAccount();
+		Properties prop = setupInsightAccount();
 
 		// Get the default Session object.
 		Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
@@ -31,7 +32,7 @@ public class EMail {
 			MimeMessage message = new MimeMessage(session);
 
 			// Set From: header field of the header.
-			message.setFrom(new InternetAddress(USERNAME));
+			message.setFrom(new InternetAddress(FROM_EMAIL));
 
 			// Set To: header field of the header.
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(TO_EMAIL));
@@ -87,7 +88,7 @@ public class EMail {
 		return prop;
 	}
 	
-	private static Properties setupLegacyInsightAccount() {
+	private static Properties setupInsightAccount() {
 		// Get system properties
 		Properties prop = System.getProperties();
 
@@ -96,6 +97,7 @@ public class EMail {
 		prop.put("mail.smtp.port", "587");
 		prop.put("mail.smtp.auth", "true");
 		prop.put("mail.smtp.starttls.enable", "true");
+		prop.put("mail.smtp.ssl.protocols","TLSv1.2");
 		return prop;
 	}
 }
